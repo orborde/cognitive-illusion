@@ -17,7 +17,7 @@ def simulate(K, C):
         if not K:
             A = True
 
-    return K, A
+    return A
 
 import itertools
 
@@ -32,7 +32,7 @@ print 'the implications of different rules applying are:'
 
 possibilities = set()
 for C in CHOICES:
-    _, result = simulate(True, C)
+    result = simulate(True, C)
     print C, 'true: A =', result
     possibilities.add(result)
 
